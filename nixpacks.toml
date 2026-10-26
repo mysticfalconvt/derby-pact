@@ -1,0 +1,10 @@
+# Pins Node 23 for Coolify/Nixpacks builds. Nixpacks' default nodejs_22
+# resolves to 22.11 in the current nixpkgs pin; Vite 8 requires 22.12+.
+[phases.setup]
+nixPkgs = ["nodejs_23", "pnpm-9_x"]
+
+# Without this override Nixpacks misdetects TanStack Start as a static SPA and
+# serves it with Caddy, which 404s every request because there is no index.html.
+# The Nitro server listens on $PORT (default 3000).
+[start]
+cmd = "node .output/server/index.mjs"
