@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* Dark is the default theme; `data-theme="light"` on <html> switches to light.
+   Components use these semantic colors, so they adapt without `dark:` variants. */
+:root {
+  color-scheme: dark;
+  --canvas: #12161d;
+  --surface: #1a2029;
+  --ink: #f1ece3;
+  --ink-muted: #a9b1bd;
+  /* Orange text on the page background; plain school orange is legible on dark. */
+  --brand-ink: #ffa500;
+  /* Always-dark band (footer, contact card), a step darker than the page. */
+  --panel: #0b0e13;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --canvas: #fbf8f2;
+  --surface: #ffffff;
+  --ink: #1f2a37;
+  --ink-muted: #5b6573;
+  /* School orange is only 2:1 on white, so orange text is darkened to 5:1. */
+  --brand-ink: #9a5b00;
+  --panel: #1f2a37;
+}
+
+@theme inline {
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-panel: var(--panel);
+  /* Derby Elementary orange. Fills carry dark text (--color-on-brand). */
+  --color-brand: #ffa500;
+  --color-brand-hover: #f29b00;
+  --color-brand-ink: var(--brand-ink);
+  --color-on-brand: #1f2a37;
+  --color-leaf: #3f8f5a;
+  --color-berry: #c4495f;
+  --color-sky: #2f7fb5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-canvas text-ink font-sans antialiased;
+}
