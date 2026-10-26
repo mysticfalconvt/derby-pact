@@ -61,7 +61,7 @@ function Hero() {
         <img
           src="/derby-pact-logo.webp"
           alt="Derby PACT logo: a smiling tiger above the words Derby PACT, Parents and Community Together"
-          className="w-56 rotate-2 rounded-3xl shadow-xl ring-8 ring-surface sm:w-64"
+          className="w-40 rotate-2 rounded-3xl shadow-xl ring-8 ring-surface sm:w-56 md:w-64"
           width={210}
           height={210}
         />
