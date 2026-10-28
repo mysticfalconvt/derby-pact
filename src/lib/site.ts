@@ -7,7 +7,11 @@ export const SITE = {
   school: 'Derby Elementary School',
   mission:
     'To bring Derby families together to support students, celebrate learning, and build a welcoming, fun community that helps every tiger thrive.',
-  email: 'info@derbypact.org',
+  /**
+   * Shown everywhere an email appears, primary first. The Gmail address stays
+   * until info@derbypact.org is set up through Google Workspace; then remove it.
+   */
+  emails: ['info@derbypact.org', 'derbypact.pto@gmail.com'],
   facebookUrl: 'https://www.facebook.com/profile.php?id=61587061000247',
   meeting: {
     schedule: 'First Thursday of every month',

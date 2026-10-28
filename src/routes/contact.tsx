@@ -19,12 +19,18 @@ function ContactPage() {
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2">
         <Card title="Email">
-          <a
-            href={`mailto:${SITE.email}`}
-            className="font-bold text-brand-ink underline-offset-4 hover:underline"
-          >
-            {SITE.email}
-          </a>
+          <ul className="space-y-1">
+            {SITE.emails.map((email) => (
+              <li key={email}>
+                <a
+                  href={`mailto:${email}`}
+                  className="font-bold break-all text-brand-ink underline-offset-4 hover:underline"
+                >
+                  {email}
+                </a>
+              </li>
+            ))}
+          </ul>
         </Card>
         <Card title="Facebook">
           <a

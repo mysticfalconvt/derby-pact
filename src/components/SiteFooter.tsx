@@ -46,11 +46,13 @@ export function SiteFooter() {
             {SITE.meeting.time}, {SITE.meeting.location}
           </p>
           <p className="mt-4 font-bold text-white">Stay in touch</p>
-          <p className="mt-1">
-            <a href={`mailto:${SITE.email}`} className={linkClass}>
-              {SITE.email}
-            </a>
-          </p>
+          {SITE.emails.map((email, i) => (
+            <p key={email} className={i === 0 ? 'mt-1' : undefined}>
+              <a href={`mailto:${email}`} className={`break-all ${linkClass}`}>
+                {email}
+              </a>
+            </p>
+          ))}
           <p>
             <a href={SITE.facebookUrl} target="_blank" rel="noreferrer" className={linkClass}>
               Follow us on Facebook

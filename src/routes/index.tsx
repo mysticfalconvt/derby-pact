@@ -207,12 +207,19 @@ function Contact() {
           Have a question, an idea, or want to help? We would love to hear from you.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <a
-            href={`mailto:${SITE.email}`}
-            className="rounded-full bg-brand px-6 py-3 font-bold text-on-brand transition-colors hover:bg-brand-hover"
-          >
-            {SITE.email}
-          </a>
+          {SITE.emails.map((email, i) => (
+            <a
+              key={email}
+              href={`mailto:${email}`}
+              className={
+                i === 0
+                  ? 'rounded-full bg-brand px-6 py-3 font-bold text-on-brand transition-colors hover:bg-brand-hover'
+                  : 'rounded-full border-2 border-white/70 px-6 py-3 font-bold text-white transition-colors hover:bg-surface hover:text-ink'
+              }
+            >
+              {email}
+            </a>
+          ))}
           <a
             href={SITE.facebookUrl}
             target="_blank"
