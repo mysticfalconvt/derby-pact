@@ -123,7 +123,7 @@ const PILLARS = [
   },
   {
     title: 'Build Community',
-    body: 'Family events like Trunk or Treat and our Craft Fair that bring Derby families together.',
+    body: 'Family events like Trunk or Treat and our Craft Fair that bring Derby families together and help every tiger thrive.',
     color: 'bg-berry',
   },
 ]
@@ -132,10 +132,15 @@ function About() {
   return (
     <Section id="about" eyebrow="About Us" title="What is Derby PACT?">
       <p className="max-w-3xl text-lg text-ink-muted">
-        PACT stands for <strong className="text-ink">Parents and Community Together</strong>. We are
-        the parent–teacher organization for {SITE.school}, made up of families, staff, and community
-        members who want to make Derby a great place to learn and grow.
+        PACT stands for <strong className="text-ink">{SITE.tagline}</strong>. We are the
+        parent–teacher organization for {SITE.school}.
       </p>
+      <blockquote className="mt-6 max-w-3xl border-l-4 border-brand pl-5 font-display text-xl leading-snug font-semibold sm:text-2xl">
+        <span className="mb-1 block font-sans text-sm font-bold tracking-wider text-brand-ink uppercase">
+          Our Mission
+        </span>
+        {SITE.mission}
+      </blockquote>
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {PILLARS.map((pillar) => (
           <div key={pillar.title} className="rounded-2xl border border-ink/10 bg-surface p-6">
@@ -145,6 +150,12 @@ function About() {
           </div>
         ))}
       </div>
+      <Link
+        to="/about"
+        className="mt-6 inline-block font-bold text-brand-ink underline-offset-4 hover:underline"
+      >
+        More about Derby PACT →
+      </Link>
     </Section>
   )
 }

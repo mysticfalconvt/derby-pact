@@ -23,8 +23,11 @@ pnpm dev        # http://localhost:3200, also reachable from other devices on th
 
 - `src/routes/__root.tsx`: HTML shell, meta tags, fonts, header/footer
 - `src/routes/index.tsx`: home page (hero, next event, about, get involved, contact)
+- `src/routes/about.tsx`: mission, programs, organization details
+- `src/routes/contact.tsx`: contact info and organization details
 - `src/routes/events.tsx`: events page; past events move to the bottom on their own
 - `src/data/events.ts`: **add new events here**; the monthly meeting (1st Thursday) is generated
-- `src/lib/site.ts`: contact email, Facebook link, meeting details
+- `src/lib/site.ts`: mission, contact email, Facebook link, meeting details, and the
+  legal name / charity ID / address shown for Google Workspace for Nonprofits
 - `src/styles.css`: theme colors; dark by default, light via `data-theme="light"`
 - `public/flyers/`: event flyer images

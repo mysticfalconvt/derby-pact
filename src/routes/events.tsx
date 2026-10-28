@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 
 import { EventCard } from '#/components/EventCard'
+import { PageIntro } from '#/components/PageIntro'
 import { pastEvents, todayIso, upcomingEvents } from '#/data/events'
 
 export const Route = createFileRoute('/events')({
@@ -17,11 +18,9 @@ function EventsPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
-      <p className="text-sm font-bold tracking-wider text-brand-ink uppercase">Events</p>
-      <h1 className="mt-2 font-display text-4xl font-bold sm:text-5xl">What's coming up</h1>
-      <p className="mt-4 max-w-2xl text-lg text-ink-muted">
+      <PageIntro eyebrow="Events" title="What's coming up">
         Family events, fundraisers, and our monthly meetings. Everyone is welcome!
-      </p>
+      </PageIntro>
 
       <div className="mt-10 space-y-6">
         {upcoming.map((event) => (

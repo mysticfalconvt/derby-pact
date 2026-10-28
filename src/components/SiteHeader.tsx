@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react'
 import { ThemeToggle } from './ThemeToggle'
 
 const NAV_LINKS = [
-  { label: 'About', to: '/', hash: 'about' },
+  { label: 'About', to: '/about' },
   { label: 'Events', to: '/events' },
-  { label: 'Contact', to: '/', hash: 'contact' },
+  { label: 'Contact', to: '/contact' },
 ] as const
 
 const ctaClass =
@@ -51,9 +51,8 @@ export function SiteHeader() {
             <li key={link.label}>
               <Link
                 to={link.to}
-                hash={'hash' in link ? link.hash : undefined}
                 className="transition-colors hover:text-brand-ink"
-                activeProps={'hash' in link ? undefined : { className: 'text-brand-ink' }}
+                activeProps={{ className: 'text-brand-ink' }}
               >
                 {link.label}
               </Link>
@@ -102,7 +101,6 @@ export function SiteHeader() {
               <li key={link.label}>
                 <Link
                   to={link.to}
-                  hash={'hash' in link ? link.hash : undefined}
                   onClick={() => setMenuOpen(false)}
                   className="block rounded-lg px-2 py-3 text-lg font-semibold text-ink transition-colors hover:bg-ink/5"
                 >
