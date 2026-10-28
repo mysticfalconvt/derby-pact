@@ -19,8 +19,14 @@ export const SITE = {
    * must match the registration exactly; each is hidden on the site until set.
    */
   legalName: null as string | null,
-  charityId: null as string | null,
-  address: null as Address | null,
+  charityId: '41-3887013' as string | null,
+  // The school's address, which is also the PACT's registered address.
+  address: {
+    street: '907 Elm St',
+    city: 'Derby Line',
+    state: 'VT',
+    zip: '05830',
+  } as Address | null,
 }
 
 export function formatAddress({ street, city, state, zip }: Address) {

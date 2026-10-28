@@ -38,7 +38,7 @@ function ContactPage() {
           <p className="mt-1">Event news, flyers, and volunteer requests.</p>
         </Card>
         {SITE.address && (
-          <Card title="Mailing address">
+          <Card title="Address">
             <address className="not-italic">
               {SITE.legalName ?? SITE.name}
               <br />
