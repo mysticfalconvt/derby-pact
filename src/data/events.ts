@@ -40,8 +40,13 @@ export const EVENTS: PactEvent[] = [
   {
     slug: 'craft-fair-2026',
     title: 'Craft Fair',
+    date: '2026-11-14',
+    time: '9:00 AM – 3:00 PM',
+    location: 'Derby Elementary School Gym, 907 Elm Street, Derby Line, VT',
     summary:
-      'Plans are underway for the Derby PACT Craft Fair. Date and details coming soon — come to a monthly meeting to help shape it!',
+      'Our annual Craft Fair is back! Come shop handmade goods from lots of local crafters and enter the crafters raffle. All are welcome, and entry is free.',
+    highlights: ['Lots of crafters', 'Crafters raffle', 'Free entry', 'All welcome'],
+    flyers: [{ src: '/flyers/craft-fair-2026.webp', alt: 'Craft Fair flyer' }],
   },
 ]
 
